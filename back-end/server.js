@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const PeopleModel = require("./Model/People");
-const Data = require("../People.json");
+// const Data = require("../People.json");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
