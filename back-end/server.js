@@ -12,7 +12,7 @@ const app = express();
 app.use(cookieParser());
 
 app.use(cors({
-    origin: 'https://staff-frontend-final.vercel.app/',
+    origin: 'https://staff-frontend-final.vercel.app',
     credentials:true
 
 }))
