@@ -8,14 +8,14 @@ function OverView() {
     }, []);
 
     async function showUser() {
-        const res = await axios.get("staff-pi.vercel.app/overview", { withCredentials: true });
+        const res = await axios.get("https://staff-pi.vercel.app/overview", { withCredentials: true });
         const newUser = res.data.msg;
         setUser(newUser);
 
     }
 
     async function clearCookies(){
-        const res = await axios.get("staff-pi.vercel.app/logout",{withCredentials:true});
+        const res = await axios.get("https://staff-pi.vercel.app/logout",{withCredentials:true});
         alert("Logged Out");
     }
    
@@ -24,7 +24,7 @@ function OverView() {
             
             {user === 'failed' ?
                 <div>
-                    <form action="staff-pi.vercel.app/login" method="post">
+                    <form action="https://staff-pi.vercel.app/login" method="post">
                         <input type="text" name="username" placeholder="enter your username"  className="mx-4 border border-gray-500"/>
                         <input type="text" name="password" placeholder="enter admin as password" className="mx-4 border border-gray-500" />
                         <button className="bg-blue-800 py-2 px-4 rounded-xl text-white">Login</button>
