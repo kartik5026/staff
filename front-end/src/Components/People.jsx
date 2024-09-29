@@ -59,7 +59,7 @@ function People() {
 
     async function handleChange(e){
         const val = e.target.value;
-        const res = await axios.post(https://staff-pi.vercel.app/search",{val});
+        const res = await axios.post("https://staff-pi.vercel.app/search",{val});
         const foundUsers =await res.data;
         console.log(foundUsers.length);
         if(foundUsers.length>0){
