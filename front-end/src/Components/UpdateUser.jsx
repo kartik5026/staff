@@ -3,7 +3,7 @@ function UpdateUser() {
     return (
         <>
             <div className="min-w-[50vw]  mx-auto">
-                <form action="staff-pi.vercel.app/update" method="post">
+                <form action="https://staff-pi.vercel.app/update" method="post">
                     <div>
                         <h1>Image</h1>
                         <input type="text" name="newuserImage"  placeholder="Enter Your Image URL" />
