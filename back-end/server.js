@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const PeopleModel = require("./Model/People");
 // const Data = require("../People.json");
 const cors = require("cors");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const app = express();
@@ -110,10 +110,10 @@ app.post("/delete", async (req, res) => {
 
 app.post("/login", (req, res) => {
     const { username, password } = req.body;
-    const hashedPassword = bcrypt.hashSync(password, 10);
+    // const hashedPassword = bcrypt.hashSync(password, 10);
     const myPassword = "admin";
-    const isPasswordMatch = bcrypt.compareSync(myPassword, hashedPassword);
-    if (isPasswordMatch) {
+    // const isPasswordMatch = bcrypt.compareSync(myPassword, hashedPassword);
+    if (password===myPassword) {
         const token = jwt.sign({ username }, secret_key, { expiresIn: '1h' });
         res.cookie('myToken', token, {
             httpOnly: true,
